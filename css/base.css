@@ -1,0 +1,65 @@
+/* 1. Убираем стандартные отступы и маркеры */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Сбрасываем отступы для заголовков и параграфов */
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+}
+
+/* 2. Работа с изображениями (очень важно!) */
+img {
+  display: block; /* Убирает лишний отступ снизу у картинок */
+  max-width: 100%; /* Картинки не будут вылезать за пределы контейнера */
+  height: auto;
+}
+
+/* 3. Ссылки */
+a {
+  text-decoration: none;
+  color: inherit; /* Ссылка наследует цвет текста родителя (удобно) */
+}
+
+/* 4. Кнопки и инпуты */
+button,
+input,
+textarea,
+select {
+  font: inherit; /* Наследуют шрифт от body (чтобы не было Arial по умолчанию) */
+  color: inherit;
+  border: none; /* Убираем стандартные рамки */
+  background: transparent; /* Убираем стандартный серый фон */
+}
+
+button {
+  cursor: pointer; /* Курсор-рука ВСЕГДА на кнопках */
+  padding: 0; /* Убираем дефолтные отступы, зададим свои в компонентах */
+}
+
+/* Убираем дефолтный outline только для мыши, но оставляем для клавиатуры (доступность) */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #007bff; /* Или твой основной цвет */
+  outline-offset: 2px;
+}
+
+/* 5. Глобальный box-sizing (лучшая практика) */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* 6. Базовые настройки body */
+body {
+  min-height: 100vh; /* Чтобы страница занимала хотя бы весь экран */
+  line-height: 1.5; /* Базовый межстрочный интервал для читаемости */
+  -webkit-font-smoothing: antialiased; /* Делает шрифты чуть ровнее на Mac */
+}
