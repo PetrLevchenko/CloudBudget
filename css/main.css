@@ -3,9 +3,10 @@ html {
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   /* font-family: "Lato", sans-serif; */
+}
+* {
   /* outline: 1px solid red; */
 }
-
 .lending__page {
   max-width: 1480px;
   margin: 0 auto;
@@ -36,7 +37,7 @@ html {
   gap: 20px;
 }
 
-.navbar__logo__h3 {
+.navbar__logo-h3 {
   display: flex;
   gap: 7px;
   align-items: center;
@@ -111,11 +112,64 @@ button:hover {
   opacity: 0.8;
 }
 
+.video__items {
+  padding: 94px 0 94px 165px;
+  display: flex;
+  max-width: 1180px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.video__left {
+  max-width: 445px;
+  width: 100%;
+}
+
+.video__h2 {
+  margin-top: 32px;
+  margin-bottom: 43px;
+  font: 500 36px "Roboto", sans-serif;
+  color: #000;
+}
+
+.video__p {
+  font: 400 14px / 1.4 "Roboto", sans-serif;
+  text-align: justify;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.video__btn {
+  font: 400 14px / 1.4 "Roboto", sans-serif;
+  color: #ed4c5c;
+}
+
+.video__right video {
+  width: 100%;
+  max-width: 445px;
+  height: auto;
+  aspect-ratio: 445 / 311;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 @media screen and (max-width: 1500px) {}
 
 @media screen and (max-width: 1440px) {}
+@media screen and (max-width: 1200px) {
+  .video__items {
+    padding: 94px 20px; /* Убираем 165px слева, оставляем безопасные 20px */
+  }
+}
 
-@media screen and (max-width: 920px) {}
+@media screen and (max-width: 920px) {
+  .video__items {
+    padding: 94px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .header__h1 {
@@ -146,10 +200,14 @@ button:hover {
     font-size: 14px;
     padding: 12px 24px;
   }
+  .video__h2 {
+    font-size: 31px;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 360px) {
-  .navbar__logo__h3 {
+  .navbar__logo-h3 {
     flex-direction: column;
   }
 
@@ -167,6 +225,9 @@ button:hover {
 
   .header__h1 {
     font-size: 24px;
+  }
+  .video__h2 {
+    font-size: 22px;
   }
 }
 
