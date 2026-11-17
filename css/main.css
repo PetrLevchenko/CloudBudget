@@ -4,9 +4,11 @@ html {
   font-family: "Roboto", sans-serif;
   /* font-family: "Lato", sans-serif; */
 }
+
 * {
   /* outline: 1px solid red; */
 }
+
 .lending__page {
   max-width: 1480px;
   margin: 0 auto;
@@ -113,7 +115,7 @@ button:hover {
 }
 
 .video__items {
-  padding: 94px 0 94px 165px;
+  padding: 94px 0 88px 165px;
   display: flex;
   max-width: 1180px;
   justify-content: space-between;
@@ -154,12 +156,97 @@ button:hover {
   border-radius: 15px;
 }
 
+.over {
+  background: #fafafa;
+  padding-bottom: 119px;
+}
+
+.over-h2 {
+  font: 500 36px "Roboto", sans-serif;
+  text-align: center;
+  color: #000;
+  padding: 63px 20px 75px;
+}
+
+.over-cards {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  /* Карточки прижимаются к верху */
+  align-items: start;
+}
+
+.card1 {
+  background-image: url(../img/Bg_card1.png);
+}
+
+.card2 {
+  background-image: url(../img/Bg_card2.png);
+}
+
+.card3 {
+  background-image: url(../img/Bg_card3.png);
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 8px;
+  margin-bottom: 110px;
+}
+
+.over-text {
+  position: absolute;
+  top: 103%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 8px;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+
+  max-width: 293px;
+  width: 90%;
+  padding: 26px 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.text-h3 {
+  font: 500 18px "Roboto", sans-serif;
+  text-align: center;
+  color: #101010;
+  margin-bottom: 20px;
+}
+
+.text-p {
+  font: 400 12px / 1.5 "Roboto", sans-serif;
+  text-align: center;
+  color: #101010;
+  margin-bottom: 12px;
+}
+
+.text-btn {
+  font: 400 12px / 1.5 "Roboto", sans-serif;
+  color: #ed4c5c;
+}
+
 @media screen and (max-width: 1500px) {}
 
 @media screen and (max-width: 1440px) {}
+
 @media screen and (max-width: 1200px) {
   .video__items {
-    padding: 94px 20px; /* Убираем 165px слева, оставляем безопасные 20px */
+    padding: 94px 20px;
+    /* Убираем 165px слева, оставляем безопасные 20px */
   }
 }
 
@@ -168,6 +255,18 @@ button:hover {
     padding: 94px 0;
     flex-direction: column;
     align-items: center;
+  }
+
+  .over-cards {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin-bottom: 140px;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -200,6 +299,7 @@ button:hover {
     font-size: 14px;
     padding: 12px 24px;
   }
+
   .video__h2 {
     font-size: 31px;
     text-align: center;
@@ -226,8 +326,17 @@ button:hover {
   .header__h1 {
     font-size: 24px;
   }
+
   .video__h2 {
     font-size: 22px;
+  }
+
+  .over-h2 {
+    font-size: 22px;
+  }
+
+  .text-h3 {
+    font-size: 16px;
   }
 }
 
