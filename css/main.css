@@ -165,7 +165,7 @@ button:hover {
   font: 500 36px "Roboto", sans-serif;
   text-align: center;
   color: #000;
-  padding: 63px 20px 75px;
+  padding: 63px 0 75px;
 }
 
 .over-cards {
@@ -239,6 +239,81 @@ button:hover {
   color: #ed4c5c;
 }
 
+.features {
+  padding-bottom: 104px;
+}
+
+.features-h2 {
+  font: 500 36px "Roboto", sans-serif;
+  text-align: center;
+  color: #000;
+  padding: 63px 0 52px;
+}
+
+.features-group {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  gap: 35px;
+}
+
+.features-card {
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 255px;
+  width: 100%;
+}
+
+
+.features-img01 {
+  background-image: url(../img/bg01.png);
+}
+
+.features-img02 {
+  background-image: url(../img/bg02.png);
+}
+
+.features-img03 {
+  background-image: url(../img/bg03.png);
+}
+
+.features-img04 {
+  background-image: url(../img/bg04.png);
+}
+
+.features-img {
+  background-position: center;
+  width: 100%;
+  max-width: 117px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.features-img img {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.features-h3 {
+  font: 500 18px "Roboto", sans-serif;
+  color: #101010;
+  margin-bottom: 12px;
+}
+
+.features-p {
+  font: 400 12px "Roboto", sans-serif;
+  color: #000;
+  max-width: 191px;
+}
+
 @media screen and (max-width: 1500px) {}
 
 @media screen and (max-width: 1440px) {}
@@ -267,6 +342,11 @@ button:hover {
 
   .card:last-child {
     margin-bottom: 0;
+  }
+
+  .features-group {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -336,6 +416,14 @@ button:hover {
   }
 
   .text-h3 {
+    font-size: 16px;
+  }
+
+  .features-h2 {
+    font-size: 22px;
+  }
+
+  .features-h3 {
     font-size: 16px;
   }
 }
