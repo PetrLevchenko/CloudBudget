@@ -240,7 +240,7 @@ button:hover {
 }
 
 .features {
-  padding-bottom: 104px;
+  padding-bottom: 128px;
 }
 
 .features-h2 {
@@ -314,6 +314,46 @@ button:hover {
   max-width: 191px;
 }
 
+.app {
+  background: #ed4c5c;
+}
+
+.app-wrapper {
+  display: flex;
+  padding: 94px 0 94px 165px;
+  max-width: 1180px;
+  justify-content: space-between;
+}
+
+.app-content {
+  max-width: 445px;
+  padding-top: 28px;
+}
+
+.app-h2 {
+  font: 500 36px "Roboto", sans-serif;
+  color: #fff;
+  margin-bottom: 45px;
+}
+
+.app-p {
+  font: 400 14px / 1.4 "Roboto", sans-serif;
+  text-align: justify;
+  color: #fff;
+  margin-bottom: 46px;
+}
+
+.app-logo {
+  display: flex;
+  gap: 23px;
+}
+
+.app-img {
+  border-radius: 15px;
+  max-width: 445px;
+  width: 100%;
+}
+
 @media screen and (max-width: 1500px) {}
 
 @media screen and (max-width: 1440px) {}
@@ -322,6 +362,14 @@ button:hover {
   .video__items {
     padding: 94px 20px;
     /* Убираем 165px слева, оставляем безопасные 20px */
+  }
+
+  .app-wrapper {
+    padding: 94px 20px 94px 20px;
+    row-gap: 40px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -347,6 +395,11 @@ button:hover {
   .features-group {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .app-h2,
+  .app-p {
+    text-align: center;
   }
 }
 
@@ -384,6 +437,10 @@ button:hover {
     font-size: 31px;
     text-align: center;
   }
+
+  .app-h2 {
+    font-size: 31px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -407,24 +464,27 @@ button:hover {
     font-size: 24px;
   }
 
-  .video__h2 {
-    font-size: 22px;
-  }
-
-  .over-h2 {
-    font-size: 22px;
-  }
-
-  .text-h3 {
-    font-size: 16px;
-  }
-
+  .video__h2,
+  .over-h2,
   .features-h2 {
     font-size: 22px;
   }
 
+  .text-h3,
   .features-h3 {
     font-size: 16px;
+  }
+
+  .app-content {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .app-h2 {
+    font-size: 18px;
   }
 }
 
