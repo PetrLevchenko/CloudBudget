@@ -354,6 +354,85 @@ button:hover {
   width: 100%;
 }
 
+.contact {
+  padding: 159px 0 123px;
+}
+
+.contact-inner {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-left {
+  padding-top: 26px;
+  max-width: 434px;
+  width: 100%;
+}
+
+.contact-h2 {
+  font: 500 36px "Roboto", sans-serif;
+  color: #000;
+  margin-bottom: 53px;
+}
+
+.contact-p {
+  font: 400 14px / 1.4 "Roboto", sans-serif;
+  text-align: justify;
+  color: #000;
+}
+
+.contact-right {
+  max-width: 540px;
+  width: 100%;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+
+.contact-right input {
+  font: 400 16px "Roboto", sans-serif;
+  color: #132743;
+  /* Цвет введенного текста (обычно темный) */
+  border: 1px solid #333;
+  border-radius: 6px;
+  width: 100%;
+  /* Обязательно 100%, а не 540px */
+  height: 60px;
+  padding: 0 31px;
+  /* Отступ слева и справа, чтобы текст не прилипал */
+  outline: none;
+  /* Убираем стандартную синюю рамку браузера при клике */
+  transition: border-color 0.3s ease;
+}
+
+/* Плейсхолдер (текст "Имя", "Телефон" внутри) */
+.contact-right input::placeholder {
+  color: rgba(19, 39, 67, 0.5);
+  /* Тот самый полупрозрачный цвет */
+}
+
+/* Меняем цвет рамки, когда пользователь кликает в инпут */
+.contact-right input:focus {
+  border-color: #ed4c5c;
+}
+
+.contact-right button {
+  font: 400 14px "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background: #ed4c5c;
+  border: 1.50px solid #ed4c5c;
+  border-radius: 6px;
+  width: 160px;
+  height: 50px;
+}
+
 @media screen and (max-width: 1500px) {}
 
 @media screen and (max-width: 1440px) {}
@@ -370,6 +449,17 @@ button:hover {
     column-gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .contact-inner {
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-p {
+    text-align: center;
   }
 }
 
@@ -407,6 +497,10 @@ button:hover {
   .header__h1 {
     font-size: 58px;
     margin-top: 80px;
+  }
+
+  .contact-right input {
+    width: 100%;
   }
 }
 
@@ -466,7 +560,8 @@ button:hover {
 
   .video__h2,
   .over-h2,
-  .features-h2 {
+  .features-h2,
+  .contact-h2 {
     font-size: 22px;
   }
 
@@ -483,9 +578,14 @@ button:hover {
     gap: 15px;
     flex-wrap: wrap;
   }
+
   .app-h2 {
     font-size: 18px;
   }
 }
 
-@media screen and (max-width: 200px) {}
+@media screen and (max-width: 200px) {
+  .contact-right button {
+    width: 100%;
+  }
+}
